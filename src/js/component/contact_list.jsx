@@ -1,11 +1,16 @@
 import React from "react";
 import contact from "../../img/contact.jpg";
+import { Forms } from "./forms.jsx";
+
 
 export const ContactList = () => {
+
+
     return (
         <div>
             <div className=" d-flex justify-content-end">
-                <button type="button" className="btn btn-success mb-2 mt-2">Add new contact</button>
+                {/* <button onClick={handleShowForms} type="button" className="btn btn-success mb-2 mt-2">Add new contact</button> */}
+                <Forms />
             </div>
             <ul className="list-group mt-1">
                 <li className="list-group-item d-flex">
