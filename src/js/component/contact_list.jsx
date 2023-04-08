@@ -3,10 +3,12 @@ import { Modal, Button, Form } from 'react-bootstrap'
 import contact from "../../img/contact.jpg";
 import { Forms } from "./forms.jsx";
 import { DeleteContact } from "./delete_contact.jsx"
+import { ContactCard } from "./contact_card.jsx";
 
 
 
 export const ContactList = () => {
+    // Handles open and close modal to edit contact
     const [showModal, setShowModal] = useState(false);
 
     const handleShowModal = () => {
@@ -17,6 +19,7 @@ export const ContactList = () => {
         setShowModal(false);
     };
 
+    // Handles open and close modal to delete contact
     const [showDelete, setShowDelete] = useState(false);
 
     const handleShowDelete = () => {
@@ -27,6 +30,17 @@ export const ContactList = () => {
         setShowDelete(false);
     }
 
+    // Handles open and close contact card
+    const [showCard, setShowCard] = useState(false);
+
+    const handleShowCard = () => {
+        setShowCard(true);
+    };
+
+    const handleCloseCard = () => {
+        setShowCard(false);
+    };
+
     return (
         <div>
             <div className=" d-flex justify-content-end">
@@ -36,7 +50,8 @@ export const ContactList = () => {
             <ul className="list-group mt-1">
                 <li className="list-group-item d-flex">
                     <div className="me-3">
-                        <img src={contact} alt="..." className="contact-image rounded-circle" />
+                        <img onClick={handleShowCard} src={contact} alt="..." className="contact-image rounded-circle" />
+                    <ContactCard showCard={showCard} handleCloseCard={handleCloseCard} />
                     </div>
                     <div className="d-flex flex-column p-2">
                         <p className="name">Name</p>

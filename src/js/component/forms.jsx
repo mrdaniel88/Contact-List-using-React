@@ -9,7 +9,7 @@ export const Forms = ({ showModal, handleCloseModal }) => {
 
     return (
         <>
-            <Modal show={showModal} onHide={handleCloseModal}>
+            <Modal size="lg" show={showModal} onHide={handleCloseModal}>
                 <Modal.Header closeButton>
                     <Modal.Title>Add a new contact</Modal.Title>
                 </Modal.Header>
