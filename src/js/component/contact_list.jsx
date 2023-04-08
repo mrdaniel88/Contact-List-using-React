@@ -1,10 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
+import { Modal, Button, Form } from 'react-bootstrap'
 import contact from "../../img/contact.jpg";
 import { Forms } from "./forms.jsx";
+import {EditContact} from "./edit_contact.jsx";
 
 
 export const ContactList = () => {
-
+    // const [isModalOpen, setIsModalOpen] = useState(false);
+    // const handleShowForms = () => {
+    // setIsModalOpen(true);
+    // }
 
     return (
         <div>
@@ -24,7 +29,7 @@ export const ContactList = () => {
                         <p className="text-secondary "><i className="fa-solid fa-envelope text-secondary"></i> Email</p>
                     </div>
                     <div className="icons-edit ms-auto">
-                        <i className="fa-solid fa-pencil me-4"></i>
+                    <EditContact />
                         <i className="fa-solid fa-trash-can me-2"></i>
                     </div>
                 </li>
@@ -39,7 +44,7 @@ export const ContactList = () => {
                         <p className="text-secondary "><i className="fa-solid fa-envelope text-secondary"></i> Email</p>
                     </div>
                     <div className="icons-edit ms-auto">
-                        <i className="fa-solid fa-pencil me-4"></i>
+                        <EditContact />
                         <i className="fa-solid fa-trash-can me-2"></i>
                     </div>
                 </li>
@@ -54,7 +59,7 @@ export const ContactList = () => {
                         <p className="text-secondary "><i className="fa-solid fa-envelope text-secondary"></i> Email</p>
                     </div>
                     <div className="icons-edit ms-auto">
-                        <i className="fa-solid fa-pencil me-4"></i>
+                    <EditContact />
                         <i className="fa-solid fa-trash-can me-2"></i>
                     </div>
                 </li>
@@ -69,7 +74,7 @@ export const ContactList = () => {
                         <p className="text-secondary "><i className="fa-solid fa-envelope text-secondary"></i> Email</p>
                     </div>
                     <div className="icons-edit ms-auto">
-                        <i className="fa-solid fa-pencil me-4"></i>
+                    <EditContact />
                         <i className="fa-solid fa-trash-can me-2"></i>
                     </div>
                 </li>

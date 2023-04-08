@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap'
 
-export const Forms = () => {
+export const EditContact = () => {
     const [showForms, setShowForms] = useState(false);
 
     const handleShowForms = () => setShowForms(true);
@@ -24,6 +24,7 @@ export const Forms = () => {
                         <Form.Label>Address</Form.Label>
                         <Form.Control type='text' placeholder='Enter Address' />
                     </Form>
+                    Modal content goes here.
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleCloseForms}>
@@ -34,9 +35,10 @@ export const Forms = () => {
                     </Button>
                 </Modal.Footer>
             </Modal>
-            <Button variant="success" onClick={handleShowForms}>
-                Add new contact
+            <Button className='border-0' bg='white' variant='light' onClick={handleShowForms}>
+            <i className="fa-solid fa-pencil me-4" onClick={handleShowForms}></i>
             </Button>
+            
         </>
     );
 }
