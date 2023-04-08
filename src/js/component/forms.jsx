@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap'
 
-export const Forms = () => {
-    const [showForms, setShowForms] = useState(false);
+export const Forms = ({ showModal, handleCloseModal }) => {
+    // const [showForms, setShowForms] = useState(false);
 
-    const handleShowForms = () => setShowForms(true);
-    const handleCloseForms = () => setShowForms(false);
+    // const handleShowForms = () => setShowForms(true);
+    // const handleCloseForms = () => setShowForms(false);
 
     return (
         <>
-            <Modal show={showForms} onHide={handleCloseForms}>
+            <Modal show={showModal} onHide={handleCloseModal}>
                 <Modal.Header closeButton>
                     <Modal.Title>Add a new contact</Modal.Title>
                 </Modal.Header>
@@ -26,17 +26,17 @@ export const Forms = () => {
                     </Form>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={handleCloseForms}>
+                    <Button variant="secondary" onClick={handleCloseModal}>
                         Close
                     </Button>
-                    <Button variant="primary" onClick={handleCloseForms}>
+                    <Button variant="primary" onClick={handleCloseModal}>
                         Save Changes
                     </Button>
                 </Modal.Footer>
             </Modal>
-            <Button variant="success" onClick={handleShowForms}>
+            {/* <Button variant="success" onClick={handleShowModal}>
                 Add new contact
-            </Button>
+            </Button> */}
         </>
     );
 }

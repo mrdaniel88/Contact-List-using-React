@@ -23,6 +23,8 @@
     font-weight: bold;
 }
 
-/* .icons-edit {
-    margin-left: auto;
-} */
+.icons-edit {
+    cursor: pointer;
+    height: 10px;
+    /* width:  10px; */
+}
