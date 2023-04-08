@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Modal, Button, Form } from 'react-bootstrap'
 import contact from "../../img/contact.jpg";
 import { Forms } from "./forms.jsx";
+import { DeleteContact } from "./delete_contact.jsx"
 
 
 
@@ -15,6 +16,16 @@ export const ContactList = () => {
     const handleCloseModal = () => {
         setShowModal(false);
     };
+
+    const [showDelete, setShowDelete] = useState(false);
+
+    const handleShowDelete = () => {
+        setShowDelete(true);
+    }
+
+    const handleCloseDelete = () => {
+        setShowDelete(false);
+    }
 
     return (
         <div>
@@ -36,7 +47,8 @@ export const ContactList = () => {
                     <div className="icons-edit ms-auto">
                         <i className="fa-solid fa-pencil me-4" onClick={handleShowModal}></i>
                         <Forms showModal={showModal} handleCloseModal={handleCloseModal} />
-                        <i className="fa-solid fa-trash-can me-2"></i>
+                        <i className="fa-solid fa-trash-can me-2" onClick={handleShowDelete}></i>
+                        <DeleteContact showDelete={showDelete} handleCloseDelete={handleCloseDelete} />
                     </div>
                 </li>
                 <li className="list-group-item d-flex">
@@ -52,7 +64,8 @@ export const ContactList = () => {
                     <div className="icons-edit ms-auto">
                         <i className="fa-solid fa-pencil me-4" onClick={handleShowModal}></i>
                         <Forms showModal={showModal} handleCloseModal={handleCloseModal} />
-                        <i className="fa-solid fa-trash-can me-2"></i>
+                        <i className="fa-solid fa-trash-can me-2" onClick={handleShowDelete}></i>
+                        <DeleteContact showDelete={showDelete} handleCloseDelete={handleCloseDelete} />
                     </div>
                 </li>
                 <li className="list-group-item d-flex">
@@ -68,7 +81,8 @@ export const ContactList = () => {
                     <div className="icons-edit ms-auto">
                         <i className="fa-solid fa-pencil me-4" onClick={handleShowModal}></i>
                         <Forms showModal={showModal} handleCloseModal={handleCloseModal} />
-                        <i className="fa-solid fa-trash-can me-2"></i>
+                        <i className="fa-solid fa-trash-can me-2" onClick={handleShowDelete}></i>
+                        <DeleteContact showDelete={showDelete} handleCloseDelete={handleCloseDelete} />
                     </div>
                 </li>
                 <li className="list-group-item d-flex">
@@ -84,7 +98,8 @@ export const ContactList = () => {
                     <div className="icons-edit ms-auto">
                         <i className="fa-solid fa-pencil me-4" onClick={handleShowModal}></i>
                         <Forms showModal={showModal} handleCloseModal={handleCloseModal} />
-                        <i className="fa-solid fa-trash-can me-2"></i>
+                        <i className="fa-solid fa-trash-can me-2" onClick={handleShowDelete}></i>
+                        <DeleteContact showDelete={showDelete} handleCloseDelete={handleCloseDelete} />
                     </div>
                 </li>
             </ul>
